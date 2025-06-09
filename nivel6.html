@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nivel 6 💖</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <style>
+    #modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 30px;
+      border: 2px solid #ff69b4;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      text-align: center;
+    }
+
+    #modal h2 {
+      color: #e75480;
+    }
+
+    #modal button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #ff69b4;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Último nivel</h1>
+
+  <section>
+    <p>Ya estando en la ronda final, quiero hablarte desde lo más profundo de mi corazón<br>
+       Sé que no hay palabras para explicar lo que siento, pero sí para mostrarte mis metas contigo<br>
+       quiero que seas tú con quien despierte en las mañanas, verte a la cara será la señal de que<br>
+       lo logré, pude ser feliz, y lo seguiré siendo, hasta el final de mi vida, y si hay más vidas<br>
+       quiero estar contigo en todas ellas, quiero que tú estés allí en cada uno de mis logros y quiero<br>
+       estar allí en cada uno de tus logros, poder decirte en ese momento que estoy muy orgulloso de tí<br>
+       que admiro cómo sales adelante, que amo todo de vos, que me encanta que seas tú, no hay nadie<br>
+      con ese carisma, son esa forma de hablar, de caminar, de mirar, que todo lo que haces es único,<br>
+      que todo lo que haces me mata, me cura el alma, verte sonreír, es lo que más amo en esta vida,<br>
+      y lo que más anhelo es proponerte <b><u>matrimonio</u></b>, y cuando lo cumpla, te prometo que nada te faltará, las risas,<br>
+      el cariño, nunca cambiará. Sonará raro lo que diga ahora, pero... verte con quel vestido blanco, es lo que<br>
+      me hará dar cuenta de que Dios ya me lo dió todo, que soy el hombre más afortunado de toda la historia humana<br>
+      Y como dicen por ahí, quiero que los ojos de mis hijos, sean como los tuyos, quiero que tú seas quien de cariño<br>
+      a mis perros, quiero que seas tú la persona con la que compartiré mi vida, y será tú y sólo tú, mi esposa<br><br>
+      Te Amo Melany, gracias por estos 3 meses, y te aseguro que por mi parte, estos meses, se volverán en años, en vidas<br>
+      Gracias mi vida, por todo, por sacarme sonrisas cuando me la pasaba mal, cuando me sentía solo, eso nunca lo olvidaré<br>
+    </p>
+  </section>
+
+  <section>
+    <img src="img/foto5.jpg" class="imghola">
+    <p>Y pensar que todo comenzó con ese "holaa"<br>
+       no me arrepiento de haberte escrito, me arrepiento por no escribirte antes</p>
+  </section>
+
+  <section>
+    <audio id="musica" controls style="width: 300px; filter: brightness(0.8);">
+      <source src="musicas/Protagonista.mp3" type="audio/mpeg">
+      <source src="musicas/Protagonista.mp3" type="audio/ogg">
+      Tu navegador no puede soportar el elemento de audio amor
+    </audio>
+    <br>
+    <button id="playBtn">Reproducir</button>
+  </section>
+
+  <!-- CONTRASEÑA -->
+  <section>
+    <input type="text" id="clave" placeholder="Aquí la contraseña...">
+    <button onclick="verificarClaveFinal()">Desbloquear</button>
+  </section>
+
+  <!-- MODAL -->
+  <div id="modal">
+    <h2>Lo lograste, Melany! 💕</h2>
+    <p>Llegaste hasta el final...<br>
+    Y solo quiero que sepas que te quiero muchísimo<br>
+    Esta cartita la hice con todo mi corazón sólo para vos 💖<br>
+    Ojalá te haya gustado mi amor, y ahora sin nada más que decir, byeee bb</p>
+    <button onclick="cerrarModal()">Cerrar</button>
+  </div>
+
+  <script>
+    const audio = document.getElementById('musica');
+    const boton = document.getElementById('playBtn');
+    audio.volume = 0.2;
+
+    boton.addEventListener('click', () => {
+      if (audio.readyState >= 1) {
+        audio.currentTime = 112;
+        audio.play();
+      } else {
+        audio.addEventListener('loadedmetadata', () => {
+          audio.currentTime = 112;
+          audio.play();
+        }, { once: true });
+      }
+    });
+
+    function verificarClaveFinal() {
+      const claveIngresada = document.getElementById('clave').value.toLowerCase();
+      const claveCorrecta = "matrimonio"; // Cambiá esto a la clave real
+      if (claveIngresada === claveCorrecta) {
+        document.getElementById('modal').style.display = 'block';
+      } else {
+        alert("Esa no es la clave correcta 🙈");
+      }
+    }
+
+    function cerrarModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nivel 3 💖</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <h1>Nivel 3</h1>
+
+  <!-- 💌 MENSAJE AQUÍ -->
+  <section>
+<p>
+Sé que no somos personas mayores<br>
+que lo que siento para nuestra edad quizá es algo enorme<br>
+pero yo seré el mejor de mejores<br>
+pero mostrarte que yo puedo aliviar tus dolores<br><br>
+
+Pase lo que pase yo te amaré<br>
+cuando estés mal, a tu lado estaré<br>
+cuando caigas, yo te levantaré<br>
+cuando te sientas sola, con un abrazo lo remediaré<br><br>
+
+Aunque miles de obstáculos se opongan<br>
+haré que mi corazón me guíe el camino<br>
+para llegar a estar contigo<br>
+ver como nuestros corazones se alocan<br>
+quisiera ver ya lo que te prometí<br>
+en el futuro sé que lo cumplí<br>
+y aunque yo no esté ahí<br>
+mataría por verte sonreír<br>
+ver como me miras a los ojos, y querer decir a todo un sí<br><br>
+
+Debo aceptar, que me enamoré, a ti yo me enganché<br>
+mis ojos sólo aquel futuro ven<br>
+quizás<br>
+</p>
+
+
+
+  <!-- 📸 FOTO AQUÍ -->
+  <section>
+    <img src="img/foto2.jpg">
+    <p>Cada foto que nos tomamos es hermosa es algo que deberíamos hacer más seguido jeje</p>
+    <p>Recalco, TE AMO MUCHOOOO</p>
+    <br>
+    <br>
+    <h6>(psdt: la contraseña es algo que los dos tenemos al mismo tiempo en la foto)</h6>
+  </section>
+
+  <section>
+    <audio id="musica" controls style="width : 300px; filter: brightness(0.8);">
+      <source src="musicas/Dame Love Remix.mp3" type="audio/mpeg">
+      <source src="musicas/Dame Love Remix.mp3" type="audio/ogg"> Tu navegador no puede soportar el elemento de audio amor
+    </audio>
+    <br>
+      <button id="playBtn">Reproducir</button>
+  </section>
+
+  <!--CONTRASEÑA -->
+  <section>
+    <input type="text" id="clave" placeholder="Aquí la contraseña...">
+    <button onclick="verificarNivelX('lentes', 'nivel4.html')">Desbloquear</button>
+  </section>
+  
+   <script>
+  const audio = document.getElementById('musica');
+  const boton = document.getElementById('playBtn');
+  audio.volume = 0.2;
+
+  boton.addEventListener('click', () => {
+    if (audio.readyState >= 1) {
+      audio.currentTime = 107;
+      audio.play();
+    } else {
+      audio.addEventListener('loadedmetadata', () => {
+        audio.currentTime = 107;
+        audio.play();
+      }, { once: true }); // Solo se ejecuta una vez
+    }
+  });
+  </script>
+</body>
+</html>

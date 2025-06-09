@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nivel 4 💖</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <h1>Nivel 4</h1>
+
+  <!-- 💌 MENSAJE AQUÍ -->
+  <section>
+    <p>Melany, a veces me quedo pensando en cómo algo tan bonito como tú pudo llegar a mi vida.<br>
+      Tu sonrisa tiene esa magia que calma mis pensamientos,<br>
+      y tu mirada es ese lugar al que siempre quiero volver.<br>
+      Contigo, los días se sienten más suaves, como si el mundo bajara el volumen solo para<br>
+      escucharte reír. No sé qué hice para merecerte, pero lo agradezco en silencio cada día.<br>
+      Eres esa canción tranquila que quiero escuchar en bucle, esa luz que brilla incluso <br>
+      en mis momentos más grises. Gracias por ser tú, y por hacerme sentir que,<br>
+      mientras estés cerca, todo va a estar bien.</p>
+  </section>
+
+  <section>
+    <img src="img/foto4.jpg">
+    <p>En fin, yo acá poniéndome guapo sólo para vos<br>
+       en mi cabeza sólo estarás tú Melany</p>
+    <br>
+    <br>
+    <h6>(psdt:la contraseña es algo que te prometí que tendríamos, pista, muy pequeños)</h6>
+  </section>
+
+  <section>
+     <audio id="musica" controls style="width : 300px; filter: brightness(0.8);">
+      <source src="musicas/En la oscuridad.mp3" type="audio/mpeg">
+      <source src="musicas/En la oscuridad.mp3" type="audio/ogg"> Tu navegador no puede soportar el elemento de audio amor
+     </audio>
+     <br>
+      <button id="playBtn">Reproducir</button>
+  </section>
+
+  <!--CONTRASEÑA -->
+  <section>
+    <input type="text" id="clave" placeholder="Aquí la contraseña...">
+    <button onclick="verificarNivelX('hijos', 'nivel5.html')">Desbloquear</button>
+  </section>
+  
+   <script>
+  const audio = document.getElementById('musica');
+  const boton = document.getElementById('playBtn');
+  audio.volume = 0.2;
+
+  boton.addEventListener('click', () => {
+    if (audio.readyState >= 1) {
+      audio.currentTime = 67;
+      audio.play();
+    } else {
+      audio.addEventListener('loadedmetadata', () => {
+        audio.currentTime = 67;
+        audio.play();
+      }, { once: true }); // Solo se ejecuta una vez
+    }
+  });
+  </script>
+</body>
+</html>

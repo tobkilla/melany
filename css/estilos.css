@@ -1,0 +1,43 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #c941e4;
+  color: #333;
+  text-align: center;
+  padding: 40px;
+}
+
+input, button {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  border-color: black;
+}
+
+button {
+  background-color: #ff99cc;
+  color: white;
+  cursor: pointer;
+}
+
+section {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.imghola {
+  width: 700px;
+  height: 200px;
+}
+
+h1 {color: black;}

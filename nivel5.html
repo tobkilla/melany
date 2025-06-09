@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nivel 5 💖</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <h1>Nivel 5</h1>
+
+  <section>
+    <p>A veces pienso en tu sonrisa<br>
+como quien recuerda el sol después de la lluvia,<br>
+suave, cálida, inesperada,<br>
+como un regalo que no sabía que necesitaba.<br><br>
+
+Tus palabras son abrigo,<br>
+me envuelven sin prisa y me dejan en calma,<br>
+como si el mundo se detuviera<br>
+siento cómo corre hacia tí mi alma<br><br>
+
+Y es que contigo, Melany,<br>
+cada segundo pesa menos,<br>
+tu sonrisa es lo que me cura a mí,<br>
+y sólo contemplo cómo lo nuestro es perfecto<br>
+</p>
+  </section>
+
+ 
+  <section>
+    <img src="img/foto3.jpg">
+    <p>Te juro que me perdí en esos ojos tan hermosos que tienes<br>
+       Y ojalá que en mis ojos, tú veas que quiero todo contigo</p>
+       <br>
+    <br>
+    <h6>(psdt: la contraseña la acabé de mencionar ahora)</h6>
+  </section>
+
+  <!-- 🎵 MÚSICA AQUÍ -->
+  <section>
+    <audio id="musica" controls style="width : 300px; filter: brightness(0.8);">
+      <source src="musicas/Vamonos.mp3" type="audio/mpeg">
+      <source src="musicas/Vamonos.mp3" type="audio/ogg"> Tu navegador no puede soportar el elemento de audio amor
+    </audio>
+    <br>
+      <button id="playBtn">Reproducir</button>
+  </section>
+
+  <!--CONTRASEÑA -->
+  <section>
+    <input type="text" id="clave" placeholder="Aquí la contraseña...">
+    <button onclick="verificarNivelX('ojos', 'nivel6.html')">Desbloquear</button>
+  </section>
+  
+   <script>
+  const audio = document.getElementById('musica');
+  const boton = document.getElementById('playBtn');
+  audio.volume = 0.2;
+
+  boton.addEventListener('click', () => {
+    if (audio.readyState >= 1) {
+      audio.currentTime = 97;
+      audio.play();
+    } else {
+      audio.addEventListener('loadedmetadata', () => {
+        audio.currentTime = 97;
+        audio.play();
+      }, { once: true });
+    }
+  });
+  </script>
+</body>
+</html>
+
